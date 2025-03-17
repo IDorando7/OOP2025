@@ -8,6 +8,7 @@ public:
 	int* a;
 public :
 
+	Sort();
 	Sort(int _n, int minimum, int maximum);
 	Sort(std::initializer_list<int> InitList);
 	Sort(int count, int* vec);

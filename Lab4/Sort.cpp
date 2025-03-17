@@ -1,6 +1,10 @@
 #include "Sort.h"
 #include <cstdarg>
    
+Sort::Sort()
+{
+	//nothing to do here
+}
 
 Sort::Sort(int _n, int minimum, int maximum)
 {
@@ -45,7 +49,7 @@ Sort::Sort(int count, ...)
 	va_end(args);
 
 }
-
+/*
 Sort::Sort(const char* s1)
 {
 	char* p;
@@ -65,6 +69,25 @@ Sort::Sort(const char* s1)
 		a[++cnt] = val;
 		p = strtok(NULL, ",");
 	}
+}*/
+
+//fara functii smechere
+Sort::Sort(const char* s1)
+{
+	int x = 0, cnt = -1;
+	n = 1;
+	for (int i = 0; s1[i]; i++)
+		n += s1[i] == ',';
+	a = new int[n];
+	for (int i = 0; s1[i]; i++)
+		if ('0' <= s1[i] and s1[i] <= '9')
+			x = x * 10 + (s1[i] - '0');
+		else if (s1[i] == ',')
+		{
+			a[++cnt] = x;
+			x = 0;
+		}
+	a[++cnt] = x;
 }
 
 void Sort::InsertSort(bool ascendent)
