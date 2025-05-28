@@ -1,0 +1,22 @@
+/// NOTA : NU GARANTEZ CA CE AM FACUT E CORECT
+/// EU NU MI-AS DA REFACERE PE CE AM SCRIS AICI DAR TEHNIC FUNCTIONEAZA
+
+o clasa de baza Catalog ce retine Note pentru Studenti; 
+un catalog retine n studenti;
+fiecare student are note la m materii
+
+avem nevoie de o clasa abstracta Materie (ce va contine minim tipul materiei (optional / obligatori / facultativ, numarul de credite si numele acesteia)
+
+fiecare Materie (math, romana, engleza, informatica, optional1, optional2) for fi derivate din Materie
+
+fiecare student este inscris la m materii si are note la acele materii
+
+trebuie sa aveti metode de adaugare a unui student in catalog, obtinere note student, calculare medie student; studentul este identificat cel putin prin numar matricol, nume, program de invatare (lb romana, lb engleza) 
+
+catalogul va fi o clasa abstracta, din care derivam catalog RO, catalog EN, iar fiecare catalog va contine o lista de studenti
+
+metoda in catalog pentru ranking studenti dupa media generala 
+
+fiecare student poate fi inscris la materii diferite
+
+required: cel putin o functie lambda, unde vrei voi
