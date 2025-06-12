@@ -10,7 +10,7 @@ int main()
 	std::cout << "Lista doar cu romane:" << std::endl;
 	b.PrintFilter([](Carte* c)->bool 
 		{
-			return c->GetInfo()[1] == 'o';
+			return dynamic_cast<Roman*> (c) != 0;
 		}); 
 	return 0; 
 }
